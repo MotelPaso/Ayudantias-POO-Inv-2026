@@ -1,0 +1,6 @@
+POO/ControlI
+*.class
+bin
+lib
+.vscode
+.directory
