@@ -1,0 +1,31 @@
+ID,Nombre,Rol,Sueldo,esJefe,esLider
+1,Ana Torres,Backend Developer,55000.0,true,true
+2,Pedro Soto,Frontend Developer,48000.0,false,true
+3,Marcos Díaz,Jefe de Ventas,52000.0,true,true
+4,Laura Méndez,DevOps Engineer,51000.0,true,true
+5,Carlos Ruiz,Data Analyst,47000.0,false,true
+6,Sofia Herrera,UI Designer,46000.0,true,false
+7,Diego Flores,QA Engineer,49000.0,false,true
+8,Valentina Rojas,Project Manager,53000.0,true,true
+9,Roberto Vega,Systems Architect,58000.0,true,false
+10,Isabel Castro,Security Analyst,54000.0,false,true
+11,Fernando Reyes,Mobile Developer,50000.0,false,true
+12,Camila Ortiz,Technical Writer,42000.0,false,true
+13,Andrés Vargas,Database Admin,52000.0,true,true
+14,Natalia Silva,Scrum Master,51000.0,false,true
+15,Martín Herrera,Cloud Engineer,55000.0,true,true
+16,Patricio Luna,Business Analyst,49000.0,true,false
+17,Francisca Muñoz,UX Researcher,47000.0,false,false
+18,Tomás Soto,Full Stack Developer,52000.0,false,true
+19,Constanza Vega,Marketing Specialist,48000.0,true,true
+20,Sebastián Cortés,Sales Representative,44000.0,false,false
+21,Javiera Mena,Content Strategist,45000.0,false,false
+22,Rodrigo Fuentes,Network Engineer,50000.0,false,true
+23,Macarena Pinto,HR Coordinator,46000.0,true,true
+24,Benjamín Riquelme,Support Engineer,43000.0,false,false
+25,Florencia Arriagada,Product Owner,54000.0,true,true
+26,Cristóbal Díaz,Integration Specialist,51000.0,false,true
+27,Valeria Espinoza,Quality Assurance,48000.0,false,false
+28,Gonzalo Fuentes,Release Manager,52000.0,false,false
+29,Isidora Contreras,Technical Lead,56000.0,true,false
+30,Agustín Lagos,Junior Developer,38000.0,false,false
