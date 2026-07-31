@@ -3,6 +3,9 @@ import java.io.PrintStream;
 
 public class Test {
 
+    // Este archivo se utiliza igual que una clase Main/App
+    // Importenlo a su proyecto y ejecutenlo desde aqui
+
     private static int pasados = 0;
     private static int fallidos = 0;
 
@@ -21,58 +24,6 @@ public class Test {
         if (fallidos > 0) {
             System.exit(1);
         }
-    }
-
-    // ===== Helpers del harness =====
-
-    private static void assertTrue(boolean condicion, String mensaje) {
-        if (condicion) {
-            pasados++;
-            System.out.println("  [OK]    " + mensaje);
-        } else {
-            fallidos++;
-            System.out.println("  [FALLO] " + mensaje);
-        }
-    }
-
-    private static void assertEquals(Object esperado, Object obtenido, String mensaje) {
-        boolean iguales = esperado == null ? obtenido == null : esperado.equals(obtenido);
-        if (iguales) {
-            pasados++;
-            System.out.println("  [OK]    " + mensaje + " -> " + esperado);
-        } else {
-            fallidos++;
-            System.out.println("  [FALLO] " + mensaje + " -> esperado: " + esperado + ", obtenido: " + obtenido);
-        }
-    }
-
-    private static void assertThrows(Class<? extends Exception> excepcion, Runnable bloque, String mensaje) {
-        try {
-            bloque.run();
-            fallidos++;
-            System.out.println("  [FALLO] " + mensaje + " -> no se lanzó " + excepcion.getSimpleName());
-        } catch (Exception e) {
-            if (excepcion.isInstance(e)) {
-                pasados++;
-                System.out.println("  [OK]    " + mensaje + " -> se lanzó " + e.getClass().getSimpleName());
-            } else {
-                fallidos++;
-                System.out.println("  [FALLO] " + mensaje + " -> se lanzó " + e.getClass().getSimpleName()
-                        + " en vez de " + excepcion.getSimpleName());
-            }
-        }
-    }
-
-    private static String capturarSalida(Runnable bloque) {
-        PrintStream original = System.out;
-        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(buffer));
-        try {
-            bloque.run();
-        } finally {
-            System.setOut(original);
-        }
-        return buffer.toString();
     }
 
     // ===== Tests =====
@@ -131,7 +82,8 @@ public class Test {
 
         String salidaEstandar = capturarSalida(() -> juan.entregar(pedido));
         assertTrue(salidaEstandar.contains("Ana Torres"), "entregar(pedido) menciona al cliente");
-        assertTrue(salidaEstandar.contains("Entrega estándar confirmada."), "entregar(pedido) confirma entrega estándar");
+        assertTrue(salidaEstandar.contains("Entrega estándar confirmada."),
+                "entregar(pedido) confirma entrega estándar");
 
         String nota = "Dejar en la puerta, no tocar el timbre";
         String salidaConNota = capturarSalida(() -> juan.entregar(pedido, nota));
@@ -165,4 +117,58 @@ public class Test {
 
         System.out.println();
     }
+
+    // Funciones para el Test
+    // Si quieren las pueden leer, pero no les servirán demasiado
+
+    private static void assertTrue(boolean condicion, String mensaje) {
+        if (condicion) {
+            pasados++;
+            System.out.println("  [OK]    " + mensaje);
+        } else {
+            fallidos++;
+            System.out.println("  [FALLO] " + mensaje);
+        }
+    }
+
+    private static void assertEquals(Object esperado, Object obtenido, String mensaje) {
+        boolean iguales = esperado == null ? obtenido == null : esperado.equals(obtenido);
+        if (iguales) {
+            pasados++;
+            System.out.println("  [OK]    " + mensaje + " -> " + esperado);
+        } else {
+            fallidos++;
+            System.out.println("  [FALLO] " + mensaje + " -> esperado: " + esperado + ", obtenido: " + obtenido);
+        }
+    }
+
+    private static void assertThrows(Class<? extends Exception> excepcion, Runnable bloque, String mensaje) {
+        try {
+            bloque.run();
+            fallidos++;
+            System.out.println("  [FALLO] " + mensaje + " -> no se lanzó " + excepcion.getSimpleName());
+        } catch (Exception e) {
+            if (excepcion.isInstance(e)) {
+                pasados++;
+                System.out.println("  [OK]    " + mensaje + " -> se lanzó " + e.getClass().getSimpleName());
+            } else {
+                fallidos++;
+                System.out.println("  [FALLO] " + mensaje + " -> se lanzó " + e.getClass().getSimpleName()
+                        + " en vez de " + excepcion.getSimpleName());
+            }
+        }
+    }
+
+    private static String capturarSalida(Runnable bloque) {
+        PrintStream original = System.out;
+        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(buffer));
+        try {
+            bloque.run();
+        } finally {
+            System.setOut(original);
+        }
+        return buffer.toString();
+    }
+
 }
