@@ -1,0 +1,5 @@
+12.50;hamburguesa,papas,fanta
+8.90;ensalada,agua
+15.00;pizza,ceviche,coca-cola
+22.75;filete,arroz,vino
+9.99;sushi,miso

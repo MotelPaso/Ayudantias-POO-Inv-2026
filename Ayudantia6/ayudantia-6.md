@@ -1,22 +1,20 @@
 <h1 align='center'>Ayudantía 6  - POO Invierno</h1>
 <h5 align='center'>Profesor: Cristhian Rabi<br>  Ayudante: Paulo Araya</h5>
-<h6 align='center'>4 de Agosto de 2026</h6>
-Los lenguajes de programación tienen diferentes utilidades dependiendo de sus capacidades, como Python se usa para machine learning o ciencia de datos, o C# para desarrollo de videojuegos. 
+<h6 align='center'>04 de Agosto de 2026</h6>
 
-Uno de los usos principales de Java es el desarrollo de aplicaciones importantes con datos sensibles, como bancos, sistemas del gobierno o empresas grandes, hoy haremos una simulación básica de un sistema bancario.
+Al restaurante de la ayudantía pasada le gustó tu sistema, así que te han vuelto a llamar para que resuelvas dos problemas que tienen:
 
-<div align='center'><h3>Requerimientos</h3> </div>
+#### 1. Ordenar Pedidos
 
-El banco te entrego un documento (subido a Campus) con los requerimientos que debería tener tu aplicación.
+Mientras que con el sistema anterior que hiciste los pedidos funcionan, necesitan un sistema con más restricciones para forzar un orden fijo de los pedidos, el pedido más viejo tiene prioridad sobre los nuevos.
 
-<div align='center'><h3>Restricciones</h3> </div>
+#### 2. Deshacer Pedidos
 
-- No se permite usar `instanceOf`.
-- Solo se debe permitir cambiar los saldos de las cuentas, no puede existir un método del estilo `setNumCuenta()`.
-- Se puede usar la librería `List`.
-- Debes usar herencia y polimorfismo para realizar la simulación.
-- No es "necesario" hacer control de errores, en un sistema real debería hacerse. 
-- La simulación debe mostrarse por consola.
+Muy seguido ocurren accidentes en la cocina y los clientes no quedan satisfechos, necesitan una forma de deshacer el pedido más reciente para que no llegue a la mesa.
 
-Aparte de estas restricciones, tienen libertad de como funciona la interacción del usuario con el programa, no se espera que logren terminar la ayudantia completa en un bloque.
+Para resolver estos problemas, implementaremos dos nuevas estructuras de datos, Pilas y Colas.
 
+<h2 align='center'>Restricciones </h2>
+
+- No se puede usar las librerías de Java de Stack y Queue.
+- Deben usar genéricos al implementar las estructuras.

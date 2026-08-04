@@ -1,0 +1,73 @@
+Se cargaron 5 Pedidos desde pedidos.txt
+
+=== SISTEMA DE PEDIDOS ===
+Pedidos pendientes: 5
+Pedidos procesados: 0
+1. Procesar siguiente pedido
+2. Deshacer ultimo pedido
+3. Salir
+Seleccione una opcion: 1
+Pedido procesado:
+===
+Pedido
+Precio: $12.50
+Platos: [hamburguesa, papas, fanta]
+===
+
+=== SISTEMA DE PEDIDOS ===
+Pedidos pendientes: 4
+Pedidos procesados: 1
+1. Procesar siguiente pedido
+2. Deshacer ultimo pedido
+3. Salir
+Seleccione una opcion: 1
+Pedido procesado:
+===
+Pedido
+Precio: $8.90
+Platos: [ensalada, agua]
+===
+
+=== SISTEMA DE PEDIDOS ===
+Pedidos pendientes: 3
+Pedidos procesados: 2
+1. Procesar siguiente pedido
+2. Deshacer ultimo pedido
+3. Salir
+Seleccione una opcion: 2
+Pedido deshecho: ===
+Pedido
+Precio: $8.90
+Platos: [ensalada, agua]
+===
+
+=== SISTEMA DE PEDIDOS ===
+Pedidos pendientes: 3
+Pedidos procesados: 1
+1. Procesar siguiente pedido
+2. Deshacer ultimo pedido
+3. Salir
+Seleccione una opcion: 2
+Pedido deshecho: ===
+Pedido
+Precio: $12.50
+Platos: [hamburguesa, papas, fanta]
+===
+
+=== SISTEMA DE PEDIDOS ===
+Pedidos pendientes: 3
+Pedidos procesados: 0
+1. Procesar siguiente pedido
+2. Deshacer ultimo pedido
+3. Salir
+Seleccione una opcion: 2
+No hay Pedidos para deshacer.
+
+=== SISTEMA DE PEDIDOS ===
+Pedidos pendientes: 3
+Pedidos procesados: 0
+1. Procesar siguiente pedido
+2. Deshacer ultimo pedido
+3. Salir
+Seleccione una opcion: 3
+Saliendo del sistema...
